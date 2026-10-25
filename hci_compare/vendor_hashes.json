@@ -1,0 +1,10 @@
+{
+  "vendor/resnet18_geometry.py": "14786dc26945214a856495a367c7adab45eb4dd9ff486fd8a12720fec0fb501b",
+  "vendor/mtcnn.py": "7297a11539212d622c368972029ba8738eea77ae54518bc4189b686b1c0d4119",
+  "vendor/resnet50.py": "773a49a8c1c5cec1c3ed4367622162c6d18d45b0554b6579dd73b03319bcb030",
+  "vendor/resnet18.py": "2940ca0c096a8f22fffacea54cae8dc508c6cc95297fd083f684ec8e31d8aeef",
+  "vendor/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "vendor/frozen/benchmark_preprocessing.py": "d1bc4ef99fde74b8b4525948a8c85d40314399a4187cf7ea4512988a73f2920a",
+  "vendor/frozen/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+  "vendor/frozen/corruptions.py": "84ce9404f2843d4ed6c29bc4b3bf2ad0cd2cb4cacc861a7e6be94554a361a520"
+}

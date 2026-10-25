@@ -1,0 +1,10 @@
+{
+  "package": "facenet-pytorch",
+  "version": "2.5.3",
+  "weights_sha256": {
+    "data/rnet.pt": "bbb937de72efc9ef83b186c49f5f558467a1d7e3453a8ece0d71a886633f6a86",
+    "data/pnet.pt": "a2a71925e0b9996a42f63e47efc1ca19043e69558b5c523b978d611dfae49c8f",
+    "data/onet.pt": "165bfbe42940416ccfb977545cf0e976d5bf321f67083ae2aaaa5c764280118d"
+  },
+  "note": "Demo dependency pin. Exact equality to historical benchmark detector runtime has not been established."
+}

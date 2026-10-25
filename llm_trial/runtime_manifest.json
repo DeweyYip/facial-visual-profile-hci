@@ -1,0 +1,9 @@
+{
+  "tag": "b11712",
+  "asset_name": "llama-b11712-bin-macos-x64.tar.gz",
+  "browser_download_url": "https://github.com/ggml-org/llama.cpp/releases/download/b11712/llama-b11712-bin-macos-x64.tar.gz",
+  "sha256": "72155b245d2fadf488c27eb47416fa21d23a4be3add532cb0c2e880fd032965e",
+  "size": 11738039,
+  "digest_source": "https://github.com/ggml-org/llama.cpp/releases/expanded_assets/b11712",
+  "source": "https://github.com/ggml-org/llama.cpp"
+}

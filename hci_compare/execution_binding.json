@@ -1,0 +1,318 @@
+{
+  "base_config_sha256": "681e96151ed193d578a450fb314e3f08bc076945c3d124ab56866a95ff23378e",
+  "base_freeze_sha256": "2c7c78e012dc85bbf8b554eb43ff4ee9eea6c5e6f28d991d20f5ca5eca195a0a",
+  "batch_size": 16,
+  "conditions": [
+    {
+      "condition": "clean",
+      "implementation_kind": "blur",
+      "level": null,
+      "severity": 0
+    },
+    {
+      "condition": "blur",
+      "implementation_kind": "blur",
+      "level": 1.0,
+      "severity": 1
+    },
+    {
+      "condition": "blur",
+      "implementation_kind": "blur",
+      "level": 2.0,
+      "severity": 2
+    },
+    {
+      "condition": "blur",
+      "implementation_kind": "blur",
+      "level": 3.0,
+      "severity": 3
+    },
+    {
+      "condition": "blur",
+      "implementation_kind": "blur",
+      "level": 4.0,
+      "severity": 4
+    },
+    {
+      "condition": "brightness",
+      "implementation_kind": "brightness",
+      "level": 0.8,
+      "severity": 1
+    },
+    {
+      "condition": "brightness",
+      "implementation_kind": "brightness",
+      "level": 0.6,
+      "severity": 2
+    },
+    {
+      "condition": "brightness",
+      "implementation_kind": "brightness",
+      "level": 0.4,
+      "severity": 3
+    },
+    {
+      "condition": "brightness",
+      "implementation_kind": "brightness",
+      "level": 0.2,
+      "severity": 4
+    },
+    {
+      "condition": "rotation",
+      "implementation_kind": "rotation",
+      "level": 5.0,
+      "severity": 1
+    },
+    {
+      "condition": "rotation",
+      "implementation_kind": "rotation",
+      "level": 10.0,
+      "severity": 2
+    },
+    {
+      "condition": "rotation",
+      "implementation_kind": "rotation",
+      "level": 15.0,
+      "severity": 3
+    },
+    {
+      "condition": "rotation",
+      "implementation_kind": "rotation",
+      "level": 20.0,
+      "severity": 4
+    },
+    {
+      "condition": "occlusion",
+      "implementation_kind": "occlusion",
+      "level": 0.1,
+      "severity": 1
+    },
+    {
+      "condition": "occlusion",
+      "implementation_kind": "occlusion",
+      "level": 0.2,
+      "severity": 2
+    },
+    {
+      "condition": "occlusion",
+      "implementation_kind": "occlusion",
+      "level": 0.3,
+      "severity": 3
+    },
+    {
+      "condition": "occlusion",
+      "implementation_kind": "occlusion",
+      "level": 0.4,
+      "severity": 4
+    },
+    {
+      "condition": "jpeg",
+      "implementation_kind": "jpeg",
+      "level": 75,
+      "severity": 1
+    },
+    {
+      "condition": "jpeg",
+      "implementation_kind": "jpeg",
+      "level": 50,
+      "severity": 2
+    },
+    {
+      "condition": "jpeg",
+      "implementation_kind": "jpeg",
+      "level": 25,
+      "severity": 3
+    },
+    {
+      "condition": "jpeg",
+      "implementation_kind": "jpeg",
+      "level": 10,
+      "severity": 4
+    }
+  ],
+  "corruption_seed": 0,
+  "cudnn_benchmark": false,
+  "cudnn_deterministic": true,
+  "detector_outputs": "Verified Seed0 prediction shards; no detector rerun",
+  "environment": {
+    "Pillow": "11.3.0",
+    "numpy": "2.1.3",
+    "scikit-learn": "1.6.1",
+    "torch": "2.11.0+cu130",
+    "torchvision": "0.26.0+cu130"
+  },
+  "failure_policy": "retain every sample; mask invalid M3 geometry; no GT substitution for M3",
+  "frozen_zip_sha256": "b358598a17a9a1aa86c3f09f96778ab6c11a0b27bf1358562050838321c71eb5",
+  "models": {
+    "m3_seed1": {
+      "checkpoint": "epoch_03.pt",
+      "checkpoint_sha256": "6737a5d74f07e395b9d98da24ff7932c2540c401ef611506f6d628a63f709ed8",
+      "config_sha256": "fded09e61ee8ee44baffbd18e386334897229341cf1e619b39077a8c90aecd67",
+      "prediction_sha256": "cfc0577404cd94bf3417d8ce98d3d025c64cf61b36c86fba29f5d060663c464c",
+      "selected_epoch": 3,
+      "source_sha256": {
+        "configs/attributes.yaml": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+        "datasets/celeba.py": "1d599c0e074a75f8a9bae645989681e7f93a3a3c8f8566b9530f8a69c34ddb02",
+        "datasets/celeba_predicted.py": "9a86a9a35da1faf90dd8516b9f60e171b62f0a92de8de8dce21dbed48c8e2a02",
+        "datasets/landmark_cache.py": "9e8ed836c4ace3e84970d1e3e67baaf740b919553f656640d7a9b90e7eae6968",
+        "datasets/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+        "evaluation/attributes.py": "d45ebd6e28b94dad0af46547f8da04130f0f193289f4684b1c8540e46f1026bd",
+        "models/resnet18_geometry.py": "14786dc26945214a856495a367c7adab45eb4dd9ff486fd8a12720fec0fb501b"
+      },
+      "state_key": "model_state_dict",
+      "threshold_sha256": "0d167890d509a62ea85005a2688d933f6281af2c7668d0a191eaad9c0a7fd59a"
+    },
+    "m3_seed2": {
+      "checkpoint": "epoch_03.pt",
+      "checkpoint_sha256": "6bf1c9320fccbec45bdcc2f64532a9a1a3e7c9dcc903bfdc1ea31b74a4b0ae90",
+      "config_sha256": "602ca7af828dd93e5f44d77b32d3338b034536aa88de7dc044d443f93d9b7234",
+      "prediction_sha256": "77a8bc518b337419648a92cbf4015bf0c11ba35cb06ded67a670ce41a182d076",
+      "selected_epoch": 3,
+      "source_sha256": {
+        "configs/attributes.yaml": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+        "datasets/celeba.py": "1d599c0e074a75f8a9bae645989681e7f93a3a3c8f8566b9530f8a69c34ddb02",
+        "datasets/celeba_predicted.py": "9a86a9a35da1faf90dd8516b9f60e171b62f0a92de8de8dce21dbed48c8e2a02",
+        "datasets/landmark_cache.py": "9e8ed836c4ace3e84970d1e3e67baaf740b919553f656640d7a9b90e7eae6968",
+        "datasets/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+        "evaluation/attributes.py": "d45ebd6e28b94dad0af46547f8da04130f0f193289f4684b1c8540e46f1026bd",
+        "models/resnet18_geometry.py": "14786dc26945214a856495a367c7adab45eb4dd9ff486fd8a12720fec0fb501b"
+      },
+      "state_key": "model_state_dict",
+      "threshold_sha256": "4d50922ec8e8764975647ac7190c004c74ebfeb9e3daba8d3040a0060f1f3cd4"
+    },
+    "oracle_seed1": {
+      "checkpoint": "epoch_03.pt",
+      "checkpoint_sha256": "d6da41288d40ed1d7ad5681c063a5e61c945b42b80827a36cec9208c39012091",
+      "config_sha256": "a365089122e332a30e39ff18216071d2f7c66e62acffb447dd98efe18b8a3e8c",
+      "prediction_sha256": "e5b703c0ba958cd7af1ba1d8b8fdcda7de086ef6b060a6ce4ebf6bce6bde5709",
+      "selected_epoch": 3,
+      "source_sha256": {
+        "configs/attributes.yaml": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+        "datasets/celeba.py": "1d599c0e074a75f8a9bae645989681e7f93a3a3c8f8566b9530f8a69c34ddb02",
+        "datasets/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+        "evaluation/attributes.py": "d45ebd6e28b94dad0af46547f8da04130f0f193289f4684b1c8540e46f1026bd",
+        "models/resnet18_geometry.py": "14786dc26945214a856495a367c7adab45eb4dd9ff486fd8a12720fec0fb501b"
+      },
+      "state_key": "model_state_dict",
+      "threshold_sha256": "b538a1ad9f3b57fecbcf9c7afb211630344821fd590a45479b7c897c5d65b048"
+    },
+    "oracle_seed2": {
+      "checkpoint": "epoch_02.pt",
+      "checkpoint_sha256": "0ece3aa9c741fdd4be7d09c8a05500442c8a05cf240b8995d6b7b5692c45925d",
+      "config_sha256": "b44b144ff0c087830f1f9dbd748ef6e83ccc381bbf0342a08dc4490588423b63",
+      "prediction_sha256": "d5c5e6d411e596613f78e66bc10e833f88b94448ab44bf17e18e86c248a96f40",
+      "selected_epoch": 2,
+      "source_sha256": {
+        "configs/attributes.yaml": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+        "datasets/celeba.py": "1d599c0e074a75f8a9bae645989681e7f93a3a3c8f8566b9530f8a69c34ddb02",
+        "datasets/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+        "evaluation/attributes.py": "d45ebd6e28b94dad0af46547f8da04130f0f193289f4684b1c8540e46f1026bd",
+        "models/resnet18_geometry.py": "14786dc26945214a856495a367c7adab45eb4dd9ff486fd8a12720fec0fb501b"
+      },
+      "state_key": "model_state_dict",
+      "threshold_sha256": "a5caebaf95912c8b902130841c39bb55e8f238e09fa09768c0360627cc1086f5"
+    },
+    "r18_seed1": {
+      "checkpoint": "epoch_03.pt",
+      "checkpoint_sha256": "c5168e8c5b50146e25148804d75ff77096ec2613f3ee5ccc26aac7526182feb5",
+      "config_sha256": "33276e9538af8c108a057abba9cc0a32ec57a84c19f351c5c6ac9458136c8743",
+      "prediction_sha256": "fe2d7b9206fe36bf741848beba20cc76dda0805a8ea4ea3ed9b7bb0714480161",
+      "selected_epoch": 3,
+      "source_sha256": {
+        "configs/attributes.yaml": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+        "datasets/celeba.py": "a21524acf5cacf8802fb9a68508c1df43c64aa0a06cde009a7d6f87986075a70",
+        "datasets/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+        "evaluation/attributes.py": "88b801b7770bb1372fa9862a9250203e4a75cf330214b2dd3b48b1c7eca841d7",
+        "models/resnet18.py": "2940ca0c096a8f22fffacea54cae8dc508c6cc95297fd083f684ec8e31d8aeef"
+      },
+      "state_key": "model_state",
+      "threshold_sha256": "d1bfd7ae31146b5fb01fe46724bf51fe1291362918935e099b27c30bfa3d0e6a"
+    },
+    "r18_seed2": {
+      "checkpoint": "epoch_02.pt",
+      "checkpoint_sha256": "cacfb123a9af9a78a28a189e2b7ee0637ec5827bc33c480862d84e11602a7905",
+      "config_sha256": "6385a46eef25d8b6ab5e2b2efcb4b94ad071008422b2da4ef80496e350df95ba",
+      "prediction_sha256": "4c213ae15b54498794086666f04bfa96de1b982ba457d84a6b1e238f189d978c",
+      "selected_epoch": 2,
+      "source_sha256": {
+        "configs/attributes.yaml": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+        "datasets/celeba.py": "a21524acf5cacf8802fb9a68508c1df43c64aa0a06cde009a7d6f87986075a70",
+        "datasets/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+        "evaluation/attributes.py": "88b801b7770bb1372fa9862a9250203e4a75cf330214b2dd3b48b1c7eca841d7",
+        "models/resnet18.py": "2940ca0c096a8f22fffacea54cae8dc508c6cc95297fd083f684ec8e31d8aeef"
+      },
+      "state_key": "model_state",
+      "threshold_sha256": "35deeab52cc800b6ebd23235561cfcbd8339184b70d040a84e54576bb075d6da"
+    },
+    "r50_seed1": {
+      "checkpoint": "epoch_03.pt",
+      "checkpoint_sha256": "361664364df2bd44a12a550b71a5821f89c7fe68f824caf0b5583389ab1e4d4f",
+      "config_sha256": "68f0afb46eb4bd4422b8bd517cfe15cea688407311dfc685ae4abbffa4c06f40",
+      "prediction_sha256": "41c96ed1b9f997e84cf99114d671be9e28f024dae8a9142a68f73c1b9b916c9d",
+      "selected_epoch": 3,
+      "source_sha256": {
+        "configs/attributes.yaml": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+        "datasets/celeba.py": "a21524acf5cacf8802fb9a68508c1df43c64aa0a06cde009a7d6f87986075a70",
+        "datasets/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+        "evaluation/attributes.py": "88b801b7770bb1372fa9862a9250203e4a75cf330214b2dd3b48b1c7eca841d7",
+        "models/resnet50.py": "773a49a8c1c5cec1c3ed4367622162c6d18d45b0554b6579dd73b03319bcb030"
+      },
+      "state_key": "model_state",
+      "threshold_sha256": "af831132d1fed19353cae1132cbefb97ff8b1b39b045698ecbea6b7c42283b37"
+    },
+    "r50_seed2": {
+      "checkpoint": "epoch_02.pt",
+      "checkpoint_sha256": "5f814dfaaaf0636c02c88b82540971b8e63937968b0428c5acb7977ef3713078",
+      "config_sha256": "3989cfbdbd57becb95fd9fb1b0038664e65ced55f127d2da1a8013db2d9b6d72",
+      "prediction_sha256": "1275f4f6dbcab439fd54c41d1ce5c15b4724cd86ea7fb98f0c386c374afc8c81",
+      "selected_epoch": 2,
+      "source_sha256": {
+        "configs/attributes.yaml": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+        "datasets/celeba.py": "a21524acf5cacf8802fb9a68508c1df43c64aa0a06cde009a7d6f87986075a70",
+        "datasets/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+        "evaluation/attributes.py": "88b801b7770bb1372fa9862a9250203e4a75cf330214b2dd3b48b1c7eca841d7",
+        "models/resnet50.py": "773a49a8c1c5cec1c3ed4367622162c6d18d45b0554b6579dd73b03319bcb030"
+      },
+      "state_key": "model_state",
+      "threshold_sha256": "f8ffb3388ae57bde6c743c9439ae6cb99c2d941534b829eccadfab1d311e44cb"
+    }
+  },
+  "precision": "FP32",
+  "runner_sha256": "27b485c3eb1b289d4e1dea286a8dbe8fbb6c0b1b30ab618c4ae23f46cb766280",
+  "runs": [
+    "r18_seed1",
+    "r50_seed1",
+    "m3_seed1",
+    "oracle_seed1",
+    "r18_seed2",
+    "r50_seed2",
+    "m3_seed2",
+    "oracle_seed2"
+  ],
+  "runtime": {
+    "cuda": "13.0",
+    "cudnn": 92700,
+    "gpu": "Tesla T4",
+    "python": "3.13.15"
+  },
+  "seeds": [
+    1,
+    2
+  ],
+  "shard_size": 256,
+  "source_reports": {
+    "day19": {
+      "day19_benchmark_report.json": "79e36c3725d10c2319206023f2b859854108fc7f1fc176e6998f0d96331b3e1b",
+      "execution_binding.json": "6e3088cdb07e6e6bc3edc966e19189a0c8ffed7c80ab9469c56a3dc78b6df065",
+      "test_jpeg_sha256.json": "3948ce5877a5d7a9b83513eeb562f53d6c86aa98e0975b46156e2f8559c120a4"
+    },
+    "day20": {
+      "day20_benchmark_report.json": "33dbef0b2585be9a83fbd281121042c199a45efd4ef514bdbc5fae9e5a6c696a",
+      "execution_binding.json": "6c2f8d7724715baa354b499697d3e948a7dc1fefbc2f214aa2ce40faaeea8cca",
+      "test_jpeg_sha256.json": "3948ce5877a5d7a9b83513eeb562f53d6c86aa98e0975b46156e2f8559c120a4"
+    }
+  },
+  "test_manifest_sha256": "b24fcfcae297e81dad15cd30fb40e7156c0c7c2672695ebc8f1e6513f1363e22",
+  "tf32": false,
+  "threshold_fitting_performed": false
+}

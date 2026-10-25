@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Facial Visual Profile language input v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "policy_version",
+    "score_meaning",
+    "wording_policy",
+    "input",
+    "detection",
+    "models"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "fvp_language_v1"
+    },
+    "policy_version": {
+      "const": "template_v1"
+    },
+    "score_meaning": {
+      "const": "uncalibrated_model_score"
+    },
+    "wording_policy": {
+      "type": "object",
+      "required": [
+        "positive_margin",
+        "max_claims",
+        "note"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "positive_margin": {
+          "const": 0.05
+        },
+        "max_claims": {
+          "const": 6
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "input": {
+      "type": "object",
+      "required": [
+        "final_rgb_sha256",
+        "corruption_kind",
+        "severity"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "final_rgb_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "corruption_kind": {
+          "enum": [
+            "blur",
+            "brightness",
+            "rotation",
+            "occlusion",
+            "jpeg"
+          ]
+        },
+        "severity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        }
+      }
+    },
+    "detection": {
+      "type": "object",
+      "required": [
+        "status",
+        "face_count",
+        "geometry_valid"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "ok",
+            "no_face",
+            "multiple_faces",
+            "invalid_keypoints",
+            "invalid_output",
+            "detector_error",
+            "detector_unavailable"
+          ]
+        },
+        "face_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "geometry_valid": {
+          "type": "boolean"
+        }
+      }
+    },
+    "models": {
+      "type": "object",
+      "required": [
+        "r18",
+        "r50",
+        "m3"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "r18": {
+          "$ref": "#/$defs/model"
+        },
+        "r50": {
+          "$ref": "#/$defs/model"
+        },
+        "m3": {
+          "$ref": "#/$defs/model"
+        }
+      }
+    },
+    "agreement": {
+      "type": "array",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "required": [
+          "attribute",
+          "available_models",
+          "state"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "attribute": {
+            "enum": [
+              "Smiling",
+              "Mouth_Slightly_Open",
+              "Eyeglasses",
+              "Bangs",
+              "Wearing_Hat",
+              "Mustache",
+              "No_Beard",
+              "Black_Hair",
+              "Bushy_Eyebrows",
+              "Arched_Eyebrows",
+              "High_Cheekbones",
+              "Bags_Under_Eyes",
+              "Big_Lips",
+              "Big_Nose",
+              "Double_Chin",
+              "Oval_Face",
+              "Receding_Hairline",
+              "Blond_Hair",
+              "Brown_Hair",
+              "Gray_Hair",
+              "Bald",
+              "Straight_Hair",
+              "Wavy_Hair",
+              "Sideburns"
+            ]
+          },
+          "available_models": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "state": {
+            "enum": [
+              "insufficient_models",
+              "mixed",
+              "all_positive",
+              "all_negative"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "attribute": {
+      "type": "object",
+      "required": [
+        "evidence_id",
+        "attribute",
+        "score",
+        "threshold",
+        "decision"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "type": "string"
+        },
+        "attribute": {
+          "enum": [
+            "Smiling",
+            "Mouth_Slightly_Open",
+            "Eyeglasses",
+            "Bangs",
+            "Wearing_Hat",
+            "Mustache",
+            "No_Beard",
+            "Black_Hair",
+            "Bushy_Eyebrows",
+            "Arched_Eyebrows",
+            "High_Cheekbones",
+            "Bags_Under_Eyes",
+            "Big_Lips",
+            "Big_Nose",
+            "Double_Chin",
+            "Oval_Face",
+            "Receding_Hairline",
+            "Blond_Hair",
+            "Brown_Hair",
+            "Gray_Hair",
+            "Bald",
+            "Straight_Hair",
+            "Wavy_Hair",
+            "Sideburns"
+          ]
+        },
+        "score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "threshold": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "decision": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "required": [
+        "run_name",
+        "available",
+        "reason",
+        "attributes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "run_name": {
+          "enum": [
+            "r18_seed1",
+            "r50_seed1",
+            "m3_seed1"
+          ]
+        },
+        "available": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "$ref": "#/$defs/attribute"
+          }
+        }
+      }
+    }
+  }
+}

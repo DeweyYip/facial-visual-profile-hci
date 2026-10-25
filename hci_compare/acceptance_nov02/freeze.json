@@ -1,0 +1,12 @@
+{
+  "protocol": "nov02_acceptance_v1",
+  "frozen_at_utc": "2026-10-17T17:01:26.883464+00:00",
+  "policy_files": {
+    "app.py": "425330d36097b3557a072ad8f5357dc2560db2de780679c82a39a65c968f122b",
+    "language.py": "e23bc79b407c9609128cb21c53f9c23ecdc5bb7cb892b8de261193b169fe045f",
+    "local_wording.py": "a0ef0711bf9249fc748a796870e714edf7554cd19fb9f23e2a7f87a432f7c870",
+    "attribute_names.json": "e1045ea9f5bbd3b808f9a311970c75275b0f32cf8439de0d05aad2f582f3a13a",
+    "language_input.schema.json": "f7f7cc4b0a4c68f03c6d87b46e0050a43148d9e985d6fa06b5282584a417b74b"
+  },
+  "cases_sha256": "9c790d89863e4698192476929c86ec0931fdfb0eb1217f355f854802c0c22e32"
+}
